@@ -2,158 +2,140 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Integrated Compliance Assurance Plan | FY26–FY28</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Year Integrated Compliance Assurance Plan — Tier 1 NZ Bank</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg:#0e1117;
-  --card:#161b22;
-  --border:#30363d;
-  --text:#e6edf3;
-  --muted:#8b949e;
-
-  --l1:#f5c842;
-  --l2:#2dd4bf;
-  --l3:#a78bfa;
-
-  --ct:#38bdf8;
-  --att:#4ade80;
-  --tr:#fb923c;
-  --mon:#c084fc;
-  --cr:#22d3ee;
-  --aud:#f43f5e;
-  --reg:#facc15;
-}
-
-* { box-sizing:border-box; margin:0; padding:0; }
-
 body {
-  background:var(--bg);
-  color:var(--text);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto;
-  font-size:14px;
+  margin:0;
+  font-family:'IBM Plex Sans',sans-serif;
+  background:#0a0c10;
+  color:#e8edf5;
 }
-
-header {
-  padding:32px;
-  border-bottom:2px solid var(--border);
+.header{
+  padding:30px;
+  background:#111418;
+  border-bottom:3px solid #f5c842;
 }
-header h1 { font-size:28px; }
-header p { color:var(--muted); margin-top:8px; }
-
-.main { padding:32px; }
-
-.legend {
-  display:flex; gap:24px; flex-wrap:wrap;
-  margin-bottom:32px;
+.header h1{
+  margin:0;
+  font-family:'Syne',sans-serif;
+  font-size:28px;
 }
-.legend-group { font-size:12px; }
-.legend-group strong { display:block; margin-bottom:6px; }
-.legend-item {
-  display:flex; align-items:center; gap:6px;
-  margin-bottom:4px;
-}
-.dot { width:10px; height:10px; border-radius:2px; }
-.bar { width:18px; height:4px; border-radius:2px; }
+.main{padding:30px;}
 
-.regime {
-  background:var(--card);
-  border:1px solid var(--border);
+.regime{
+  background:#181c23;
+  border:1px solid #2e3547;
   border-radius:10px;
-  margin-bottom:16px;
-  overflow:hidden;
+  margin-bottom:20px;
 }
 
-.regime-header {
-  padding:16px 20px;
-  display:flex;
-  align-items:center;
-  gap:16px;
-  cursor:pointer;
-  background:#1f242c;
+.regime-title{
+  padding:14px 18px;
+  background:#1f2430;
+  font-weight:700;
+  font-family:'Syne',sans-serif;
 }
-.regime-header:hover { background:#242a33; }
 
-.regime-title {
-  font-weight:600;
-  min-width:220px;
-}
-.regime-name {
-  color:var(--muted);
-  flex:1;
-}
-.toggle {
-  color:var(--muted);
-}
-.regime.collapsed .regime-body { display:none; }
-.regime.collapsed .toggle { transform:rotate(-90deg); }
-
-.regime-body { padding:16px 20px 20px; }
-
-.grid {
+.grid{
   display:grid;
-  grid-template-columns:140px repeat(12,1fr);
+  grid-template-columns:160px repeat(12,1fr);
   font-size:12px;
 }
-.grid-header {
-  font-weight:600;
-  background:#1f242c;
-}
-.cell {
-  border-right:1px solid var(--border);
-  border-bottom:1px solid var(--border);
+
+.cell{
+  border-right:1px solid #2e3547;
+  border-bottom:1px solid #2e3547;
   padding:6px;
 }
-.cell:last-child { border-right:none; }
 
-.year {
-  grid-column:span 4;
+.header-cell{
+  background:#252b38;
   text-align:center;
-  border-right:2px solid var(--border);
-}
-
-.lod {
   font-weight:600;
 }
-.lod-1 { color:var(--l1); }
-.lod-2 { color:var(--l2); }
-.lod-3 { color:var(--l3); }
 
-.pill {
-  font-size:11px;
+.lod{
+  font-weight:700;
+}
+.l1{color:#f5c842;}
+.l2{color:#00d4aa;}
+.l3{color:#a78bfa;}
+
+.pill{
+  font-size:10px;
   padding:2px 5px;
+  margin-bottom:3px;
   border-left:3px solid;
-  margin-bottom:4px;
-  border-radius:2px;
 }
 
-.ct { border-color:var(--ct); background:rgba(56,189,248,.15); }
-.att { border-color:var(--att); background:rgba(74,222,128,.15); }
-.tr { border-color:var(--tr); background:rgba(251,146,60,.15); }
-.mon { border-color:var(--mon); background:rgba(192,132,252,.15); }
-.cr { border-color:var(--cr); background:rgba(34,211,238,.15); }
-.aud { border-color:var(--aud); background:rgba(244,63,94,.15); }
-.reg { border-color:var(--reg); background:rgba(250,204,21,.15); }
+.ct{border-color:#38b2f5}
+.att{border-color:#84cc16}
+.tr{border-color:#f97316}
+.mon{border-color:#a78bfa}
+.cr{border-color:#22d3ee}
+.aud{border-color:#ff4d6d}
+.reg{border-color:#f5c842}
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Integrated Compliance Assurance Plan</h1>
-  <p>FY2026–FY2028 · Tier 1 Legislation · All Lines of Defence</p>
-</header>
+<div class="header">
+<h1>Integrated Compliance Assurance Plan</h1>
+<p>FY2026–FY2028 · Tier 1 Legislation · All Lines of Defence</p>
+</div>
 
-<div class="main">
+<div class="main" id="plan"></div>
 
-<div class="legend">
-  <div class="legend-group">
-    <strong>Lines of Defence</strong>
-    <div class="legend-item"><span class="bar" style="background:var(--l1)"></span>Line 1 – Business</div>
-    <div class="legend-item"><span class="bar" style="background:var(--l2)"></span>Line 2 – Compliance / Risk</div>
-    <div class="legend-item"><span class="bar" style="background:var(--l3)"></span>Line 3 – Internal Audit</div>
-  </div>
-  <div class="legend-group">
-    <strong>Assurance Type</strong>
-    <div class="legend-item"><span class="dot" style="background:var(--ct)"></span>Controls Testing</div>
+<script>
+const quarters = ["Q1","Q2","Q3","Q4","Q1","Q2","Q3","Q4","Q1","Q2","Q3","Q4"];
+
+const regimes = [
+"AML/CFT Act 2009",
+"CCCFA 2003",
+"FMCA (CoFI)",
+"FMCA Part 7 – Climate Related Disclosures",
+"Deposit Takers Act",
+"Insurance (Prudential Supervision) Act",
+"Health & Safety at Work Act 2015",
+"Contracts of Insurance Act 2024"
+];
+
+function buildRow(label, cls, activities){
+  let html = `<div class="cell lod ${cls}">${label}</div>`;
+  for(let i=0;i<12;i++){
+    html += `<div class="cell">`;
+    activities.forEach(a => {
+      html += `<div class="pill ${a}">${a.toUpperCase()}</div>`;
+    });
+    html += `</div>`;
+  }
+  return html;
+}
+
+const container = document.getElementById("plan");
+
+regimes.forEach(r => {
+  container.innerHTML += `
+    <div class="regime">
+      <div class="regime-title">${r}</div>
+      <div class="grid">
+        <div class="cell header-cell"></div>
+        ${quarters.map(q => `<div class="cell header-cell">${q}</div>`).join("")}
+
+        ${buildRow("Line 1 – Business","l1",["mon","att","ct"])}
+        ${buildRow("Line 2 – Compliance","l2",["tr","cr","ct","reg"])}
+        ${buildRow("Line 3 – Audit","l3",["aud"])}
+
+      </div>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>
