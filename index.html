@@ -2,129 +2,121 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Integrated Compliance Assurance Plan | FY26–FY28</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integrated Compliance Assurance Plan | FY26–FY28</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg:#0e1117;
-  --card:#161b22;
-  --border:#30363d;
-  --text:#e6edf3;
-  --muted:#8b949e;
+:root{
+  --bg:#0a0c10; --s1:#111418; --s2:#181c23; --s3:#1f2430;
+  --border:#2e3547; --border2:#3d4a60;
+  --gold:#f5c842; --teal:#00d4aa; --rose:#ff4d6d;
+  --sky:#38b2f5; --violet:#a78bfa; --orange:#f97316; --cyan:#22d3ee;
 
-  --l1:#f5c842;
-  --l2:#2dd4bf;
-  --l3:#a78bfa;
+  --ct:#38b2f5; --att:#84cc16; --tr:#f97316;
+  --mon:#a78bfa; --cr:#22d3ee; --aud:#ff4d6d; --reg:#f5c842;
 
-  --ct:#38bdf8;
-  --att:#4ade80;
-  --mon:#c084fc;
-  --tr:#fb923c;
-  --cr:#22d3ee;
-  --aud:#f43f5e;
-  --reg:#facc15;
+  --l1:#f5c842; --l2:#00d4aa; --l3:#a78bfa;
 }
 
-* { box-sizing:border-box; margin:0; padding:0; }
+*{box-sizing:border-box;margin:0;padding:0}
 
-body {
+body{
   background:var(--bg);
-  color:var(--text);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  color:#e8edf5;
+  font-family:'IBM Plex Sans',sans-serif;
   font-size:14px;
 }
 
-header {
-  padding:28px 36px;
-  border-bottom:2px solid var(--border);
+header{
+  padding:32px 40px;
+  background:var(--s1);
+  border-bottom:3px solid var(--gold);
 }
-header h1 { font-size:26px; }
-header p { color:var(--muted); margin-top:6px; }
+header h1{font-family:'Syne',sans-serif;font-size:32px}
+header p{color:#9aa5bc;margin-top:8px}
 
-.main { padding:32px; }
+.main{padding:32px 40px}
 
-.legend {
+/* Legend */
+.legend{
   display:flex;
-  gap:32px;
-  flex-wrap:wrap;
+  gap:40px;
   margin-bottom:32px;
+  flex-wrap:wrap;
   font-size:12px;
 }
-.legend strong { display:block; margin-bottom:6px; }
-.legend-item {
-  display:flex;
-  align-items:center;
-  gap:6px;
-  margin-bottom:4px;
-}
-.dot { width:10px; height:10px; border-radius:2px; }
-.bar { width:20px; height:4px; border-radius:2px; }
+.legend strong{display:block;margin-bottom:6px}
+.legend-item{display:flex;align-items:center;gap:6px;margin-bottom:4px}
+.dot{width:10px;height:10px;border-radius:2px}
+.bar{width:22px;height:4px;border-radius:2px}
 
-.regime {
-  background:var(--card);
+/* Regime block */
+.regime{
+  background:var(--s2);
   border:1px solid var(--border);
   border-radius:10px;
   margin-bottom:24px;
 }
-
-.regime-header {
-  padding:14px 20px;
-  background:#1f242c;
-  border-bottom:1px solid var(--border);
-  font-size:16px;
-  font-weight:600;
+.regime-header{
+  padding:16px 20px;
+  background:var(--s3);
+  font-family:'Syne',sans-serif;
+  font-weight:800;
+  font-size:18px;
 }
 
-.grid {
-  overflow-x:auto;
-}
-
-.plan-grid {
+/* Grid */
+.plan-wrap{overflow-x:auto}
+.plan{
   display:grid;
   grid-template-columns:180px repeat(12,1fr);
   font-size:12px;
 }
-
-.cell {
+.cell{
   border-right:1px solid var(--border);
   border-bottom:1px solid var(--border);
   padding:6px;
 }
-
-.header-cell {
-  background:#1f242c;
+.header-cell{
+  background:#232a36;
   font-weight:600;
   text-align:center;
 }
+.year-split{border-right:2px solid var(--border2)}
 
-.year-split {
-  border-right:2px solid var(--border);
-}
+.lod{font-weight:800}
+.lod.l1{color:var(--l1)}
+.lod.l2{color:var(--l2)}
+.lod.l3{color:var(--l3)}
 
-.lod-cell {
-  font-weight:600;
-}
-.l1 { color:var(--l1); }
-.l2 { color:var(--l2); }
-.l3 { color:var(--l3); }
-
-.pill {
-  font-size:11px;
+.pill{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
   padding:2px 6px;
   border-left:3px solid;
   border-radius:2px;
   margin-bottom:4px;
-  white-space:nowrap;
 }
 
-.ct { border-color:var(--ct); background:rgba(56,189,248,.15); }
-.att { border-color:var(--att); background:rgba(74,222,128,.15); }
-.mon { border-color:var(--mon); background:rgba(192,132,252,.15); }
-.tr { border-color:var(--tr); background:rgba(251,146,60,.15); }
-.cr { border-color:var(--cr); background:rgba(34,211,238,.15); }
-.aud { border-color:var(--aud); background:rgba(244,63,94,.15); }
-.reg { border-color:var(--reg); background:rgba(250,204,21,.15); }
+.ct{border-color:var(--ct);background:rgba(56,178,245,.15)}
+.att{border-color:var(--att);background:rgba(132,204,22,.15)}
+.tr{border-color:var(--tr);background:rgba(249,115,22,.15)}
+.mon{border-color:var(--mon);background:rgba(167,139,250,.15)}
+.cr{border-color:var(--cr);background:rgba(34,211,238,.15)}
+.aud{border-color:var(--aud);background:rgba(255,77,109,.15)}
+.reg{border-color:var(--reg);background:rgba(245,200,66,.15)}
+
+footer{
+  padding:20px 40px;
+  background:var(--s1);
+  border-top:1px solid var(--border);
+  font-size:11px;
+  color:#9aa5bc;
+  display:flex;
+  justify-content:space-between;
+}
 </style>
 </head>
 
@@ -148,8 +140,8 @@ header p { color:var(--muted); margin-top:6px; }
     <strong>Assurance Type</strong>
     <div class="legend-item"><span class="dot" style="background:var(--ct)"></span>Controls Testing</div>
     <div class="legend-item"><span class="dot" style="background:var(--att)"></span>Attestation</div>
-    <div class="legend-item"><span class="dot" style="background:var(--mon)"></span>Monitoring</div>
     <div class="legend-item"><span class="dot" style="background:var(--tr)"></span>Thematic Review</div>
+    <div class="legend-item"><span class="dot" style="background:var(--mon)"></span>Monitoring</div>
     <div class="legend-item"><span class="dot" style="background:var(--cr)"></span>Compliance Review</div>
     <div class="legend-item"><span class="dot" style="background:var(--aud)"></span>Internal Audit</div>
     <div class="legend-item"><span class="dot" style="background:var(--reg)"></span>Regulatory Engagement</div>
@@ -160,55 +152,56 @@ header p { color:var(--muted); margin-top:6px; }
 
 </div>
 
-<script>
-const YEARS = ["FY26","FY26","FY26","FY26","FY27","FY27","FY27","FY27","FY28","FY28","FY28","FY28"];
-const ASSURANCE = ["ct","att","mon","tr","cr","aud","reg"];
+<footer>
+  <div>CONFIDENTIAL – INTERNAL USE ONLY · FY26–FY28</div>
+  <div>ICAP · 3 Year Plan</div>
+</footer>
 
-const REGIMES = [
-  ["AML/CFT Act 2009"],
-  ["CCCFA 2003"],
-  ["FMCA (CoFI)"],
-  ["FMCA Part 7 – Climate Related Disclosures"],
-  ["Deposit Takers Act"],
-  ["Insurance (Prudential Supervision) Act"],
-  ["Health & Safety at Work Act 2015"],
-  ["Contracts of Insurance Act 2024"]
+<script>
+const quarters = Array.from({length:12},(_,i)=>["Q1","Q2","Q3","Q4"][i%4]);
+
+const regimes = [
+  "AML/CFT Act 2009",
+  "CCCFA 2003",
+  "FMCA (CoFI)",
+  "FMCA Part 7 – Climate Related Disclosures",
+  "Deposit Takers Act",
+  "Insurance (Prudential Supervision) Act",
+  "Health & Safety at Work Act 2015",
+  "Contracts of Insurance Act 2024"
 ];
 
-function buildCells(types) {
-  return YEARS.map((_,i) => {
-    let cell = `<div class="cell ${i%4===3?'year-split':''}">`;
-    types.forEach(t => {
-      cell += `<div class="pill ${t}">${t.toUpperCase()}</div>`;
-    });
-    return cell + `</div>`;
-  }).join("");
+function row(label, cls, acts){
+  let html = `<div class="cell lod ${cls}">${label}</div>`;
+  for(let i=0;i<12;i++){
+    html += `<div class="cell ${i%4===3?'year-split':''}">`;
+    acts.forEach(a=>html+=`<div class="pill ${a}">${a.toUpperCase()}</div>`);
+    html += `</div>`;
+  }
+  return html;
 }
 
-const root = document.getElementById("plan");
+const plan = document.getElementById("plan");
+regimes.forEach(r=>{
+  plan.innerHTML += `
+    <div class="regime">
+      <div class="regime-header">${r}</div>
+      <div class="plan-wrap">
+        <div class="plan">
+          <div class="cell header-cell"></div>
+          ${quarters.map((q,i)=>`<div class="cell header-cell ${i%4===3?'year-split':''}">${q}</div>`).join("")}
 
-REGIMES.forEach(r => {
-  root.innerHTML += `
-  <div class="regime">
-    <div class="regime-header">${r[0]}</div>
-    <div class="grid">
-      <div class="plan-grid">
-        <div class="cell header-cell">Line of Defence</div>
-        ${YEARS.map((y,i)=>`<div class="cell header-cell ${i%4===3?'year-split':''}">${['Q1','Q2','Q3','Q4'][i%4]}</div>`).join("")}
+          ${row("Line 1 – Business","l1",["mon","att","ct"])}
+          ${row("Line 2 – Compliance","l2",["ct","cr","tr","reg"])}
+          ${row("Line 3 – Audit","l3",["aud"])}
 
-        <div class="cell lod-cell l1">Line 1 – Business</div>
-        ${buildCells(["mon","att","ct"])}
-
-        <div class="cell lod-cell l2">Line 2 – Compliance</div>
-        ${buildCells(["ct","cr","tr","reg"])}
-
-        <div class="cell lod-cell l3">Line 3 – Internal Audit</div>
-        ${buildCells(["aud"])}
+        </div>
       </div>
     </div>
-  </div>`;
+  `;
 });
 </script>
 
 </body>
 </html>
+``
